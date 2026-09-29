@@ -1,5 +1,5 @@
 n=int(input("Enter a number:"))
-a=[0]*n
+a=[0]
 print("Enter number:")
 for i in range(n):
   a[i]=int(input())
