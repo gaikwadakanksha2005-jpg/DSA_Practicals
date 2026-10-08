@@ -45,4 +45,4 @@ list.append(n3)
 list.append(n4)
 list.append(Node(55))
 
-list.print(a
+list.print()
