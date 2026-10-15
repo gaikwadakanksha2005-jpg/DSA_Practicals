@@ -39,6 +39,7 @@ class LinkedList:
             
     def print(self):
         temp = self.head
+       
         print("List Of Elements:")
         while temp:
             print(temp.data,end=" ")
