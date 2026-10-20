@@ -16,22 +16,7 @@ class LinkedList:
                 temp = temp.next
             temp.next = new_node
 
-    def insert(self, new_node, pos):
-        temp = self.head
-
-        if pos == 1:    # INSERT at first position
-            new_node.next = self.head
-            self.head = new_node
-            return
-        else:           # INSERT from 2nd position
-            p = 1
-            while p != pos - 1 and temp.next != None:
-                temp = temp.next
-                p += 1
-            new_node.next = temp.next
-            temp.next = new_node
-            return
-
+    
     def del_node(self, value):
         temp = self.head
         prev = None
@@ -82,14 +67,6 @@ list.append(Node(48))
 print("Original list:")
 list.print()
 
-print("\nAfter inserting 100 at position 1:")
-list.insert(Node(100), 1)
-list.print()
-
-print("\nAfter inserting 66 at position 4:")
-list.insert(Node(66), 4)
-list.print()
-
 print("\nAfter deleting :")
-list.del_node(70)
+list.del_node(30)
 list.print()

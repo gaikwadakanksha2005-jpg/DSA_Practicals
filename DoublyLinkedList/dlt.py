@@ -52,7 +52,7 @@ class linkedList:
     
     def print(self):
             temp=self.head
-            print("list of elements:")            
+            print("\n list of elements:")            
             while temp.next:
                 #print(temp.data,end =" ")(for reverse)
                 temp=temp.next

@@ -34,9 +34,7 @@ class LinkedList:
                 p += 1
             new_node.next = temp.next
             temp.next = new_node
-
-           
-            
+    
 
     def print(self):   
         print()
