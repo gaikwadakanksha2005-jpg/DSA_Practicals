@@ -21,10 +21,9 @@ class LinkedList:
     def traverse(self):
         temp = self.head
         while temp:
-            print(temp.data,end="->")
+            print(temp.data)
             temp = temp.next
-        print("None")
-
+        
 list = LinkedList()
 list.append(Node(10))
 list.append(Node(20))
