@@ -16,8 +16,7 @@ class LinkedList:
             while temp.next!=None:
                 temp=temp.next
             temp.next=new_node
-        self.count=self.count+1    
-
+        self.count=self.count+1
     def insert(self,new_node,pos):
         temp=self.head
         if pos==1:
@@ -27,26 +26,23 @@ class LinkedList:
         p=1
         while p!=pos-1 and temp.next!=None:
             temp=temp.next
-            p+=1
+            p+=1    
         new_node.next=temp.next
-        temp.next=new_node
+        temp.next=new_node    
+
 
     def print(self):
         temp=self.head
         while temp:
             print(temp.data,end="->")
             temp=temp.next
-        print("none")
-        print("total count:",self.count)   
-
-list=LinkedList()   
-n1=Node(20)    
-list.append(n1)                         
-list.append(Node(10))
-list.append(Node(20))
-list.append(Node(30))
-list.print()
-print("After Insertion:")
-list.insert(Node(50),4)
-list.insert(Node(100),2)
-list.print()
+        print("None")                    
+        print("count:",self.count)
+l1=LinkedList()
+l1.append(Node(10))        
+l1.append(Node(20))  
+l1.append(Node(30))  
+l1.append(Node(40))  
+l1.print()
+l1.insert(Node(100),1)
+l1.print()
