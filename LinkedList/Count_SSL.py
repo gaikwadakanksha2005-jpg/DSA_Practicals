@@ -13,22 +13,17 @@ class LinkedList:
         if self.head == None:
             self.head = new_node
         else:
-            temp = self.head
-
+            temp = self.head  
             while temp.next != None:
                 temp = temp.next
-
             temp.next = new_node
-
         self.count = self.count + 1
 
     def print(self):
         temp = self.head
-
         while temp:
             print(temp.data)
             temp = temp.next
-
         print("Total Node:", self.count)
 
 
