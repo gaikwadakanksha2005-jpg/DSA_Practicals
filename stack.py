@@ -15,6 +15,15 @@ class Stack:
         new_node.next=self.top
         self.top=new_node
 
+    def pop(self):
+        if self.isempty():
+            print("Stack empty")
+        else:
+            temp=self.top
+            print("Popped Element:",temp.data)
+            self.top=self.top.next
+            temp=None
+
     def print(self):
         if self.isempty():
             print("Stack is empty")
@@ -32,3 +41,6 @@ st.push(Node(30))
 st.push(Node(40))  
 st.push(Node(50)) 
 st.print() 
+
+st.pop()
+st.print()
