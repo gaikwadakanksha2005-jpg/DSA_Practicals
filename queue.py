@@ -2,7 +2,6 @@ class Node:
     def __init__(self,val):
         self.data=val
         self.next=None
-
 class Queue:
     def __init__(self):
         self.front=self.rear=None
@@ -16,22 +15,20 @@ class Queue:
 
     def dequeue(self):
         temp=self.front
-        print("Delete Node:",temp.data)
+        print("delete Node:",temp.data)
         self.front=self.front.next
         if self.front==None:
-            print("empty")
+            print("Empty")
             self.rear=None
-
     def print(self):
         temp=self.front
         while temp:
             print(temp.data)
             temp=temp.next
-        print()                       
-que=Queue()
-que.enqueue(Node(10))
-que.enqueue(Node(20))
-que.enqueue(Node(30))
-que.print()
-que.dequeue()
-que.print()
+        print()
+qu=Queue()
+qu.enqueue(Node(10))  
+qu.enqueue(Node(20))
+qu.print()
+qu.dequeue()
+qu.print()                
