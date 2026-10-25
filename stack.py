@@ -1,5 +1,3 @@
-#Stack Implementation using Linked list
-
 class Node:
     def __init__(self,val):
         self.data=val
@@ -9,8 +7,8 @@ class Stack:
     def __init__(self):
         self.top=None
     def isempty(self):
-        return self.top is None
-    
+        return self.top is None            
+
     def push(self,new_node):
         new_node.next=self.top
         self.top=new_node
@@ -20,27 +18,23 @@ class Stack:
             print("Stack empty")
         else:
             temp=self.top
-            print("Popped Element:",temp.data)
+            print("popped Element")
             self.top=self.top.next
             temp=None
 
     def print(self):
         if self.isempty():
-            print("Stack is empty")
-        else:    
-            print("Satck conatins...")
+            print("Empty")
+        else:
             temp=self.top
             while temp:
                 print(temp.data)
-                temp=temp.next    
+                temp=temp.next
 
-st=Stack()
-st.push(Node(10))                
-st.push(Node(20))  
-st.push(Node(30))  
-st.push(Node(40))  
-st.push(Node(50)) 
-st.print() 
-
-st.pop()
-st.print()
+s1=Stack()   
+s1.push(Node(10))                                
+s1.push(Node(20))  
+s1.push(Node(30))  
+s1.print()
+s1.pop()
+s1.print()
