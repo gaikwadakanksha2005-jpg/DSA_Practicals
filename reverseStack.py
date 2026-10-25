@@ -34,6 +34,7 @@ class Stack:
                 print(temp.data)
                 temp=temp.next  
 
+# Reverse Stack using another stack
     def reverse(self):
         temp=self.top
         while temp:
