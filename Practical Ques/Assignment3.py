@@ -1,12 +1,10 @@
 
-# Node class
 class Node:
     def __init__(self, patient_id, name, priority):
         self.patient_id = patient_id
         self.name = name
         self.priority = priority
         self.next = None
-
 
 # Hospital class
 class Hospital:
@@ -25,10 +23,8 @@ class Hospital:
 
             while temp.next is not None and temp.next.priority <= priority:
                 temp = temp.next
-
             new_node.next = temp.next
             temp.next = new_node
-
         print("Patient added successfully!")
 
     # 2. Display Next Patient
@@ -57,7 +53,6 @@ class Hospital:
         else:
             temp = self.head
             print("\nWaiting Patients:")
-
             while temp is not None:
                 if temp.priority == 1:
                     status = "Critical"
@@ -65,17 +60,12 @@ class Hospital:
                     status = "Serious"
                 else:
                     status = "Normal"
-
                 print("ID:", temp.patient_id,
                       "Name:", temp.name,
                       "Priority:", status)
-
                 temp = temp.next
 
-
-# Main Program
 h = Hospital()
-
 while True:
     print("\n--- Hospital Emergency Management ---")
     print("1. Add Patient")
@@ -83,7 +73,6 @@ while True:
     print("3. Remove Patient")
     print("4. Display All Patients")
     print("5. Exit")
-
     choice = int(input("Enter your choice: "))
 
     if choice == 1:
@@ -95,19 +84,14 @@ while True:
             h.enqueue(pid, name, priority)
         else:
             print("Invalid Priority!")
-
     elif choice == 2:
         h.display_next()
-
     elif choice == 3:
         h.dequeue()
-
     elif choice == 4:
         h.display_all()
-
     elif choice == 5:
         print("Thank You!")
         break
-
     else:
         print("Invalid Choice!")
