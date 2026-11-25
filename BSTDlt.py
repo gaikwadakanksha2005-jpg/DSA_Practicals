@@ -119,7 +119,8 @@ else:
 
 #Hospital patient token management.
 # Scenario : A hospital maintains patient token numbers in BST.
-# Eachh token number is unique, and the hospital want ti retrieve patient records of tasks:
+# Each token number is unique, and the hospital want to retrieve patient records efficiently
+#  tasks:
 # 1.insert the followig token number into BST:50,30,70,20,40,60,80,10
 # 2.search for token 10 number
 # display all token nuber in sorted order
